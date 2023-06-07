@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       h1 {
+           text-align: center;
+       }
+       body{
+           perspective: 400px;
+       }
+       #areaJ {
+           width: 400px;
+           height: 400px;
+           border: 1px solid;
+           margin: auto;
+           position: relative;
+           transform: rotateX(45deg);
+           transform-style: preserve-3d;
+       }
+       .snake{
+           background-color: pink;
+           width: 40px;
+           height: 40px;
+           position: absolute;
+           opacity: .7;
+           border: 1px solid;
+       }
+       .tapa {
+           transform: translateZ(40px);
+       }
+       .atras {
+           transform: rotateX(90deg) translateZ(20px) translateY(20px);
+       }
+       .alante {
+           transform: rotateX(90deg) translateZ(-20px) translateY(20px);
+       }
+       .comida {
+           background-color: blue;
+       }
+    </style>
+</head>
+<body>
+    <h1>Snake 3D</h1>
+    <div id="areaJ">
+    </div>
+    <p>Tiempo: <span id="tiempo">00:00</span></p>
+    <p>Puntuacion: <span id="Puntuacion">0</span></p>
+    <script src="snake3d.js"></script>
+</body>
+</html>
